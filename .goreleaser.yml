@@ -1,0 +1,44 @@
+# Make sure to check the documentation at http://goreleaser.com
+---
+archives:
+  - replacements:
+      '386': i386
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+    files:
+      - LICENSE
+      - README.md
+before:
+  hooks:
+    - go mod download
+    - go generate ./...
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+      - windows
+changelog:
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+  sort: asc
+checksum:
+  name_template: checksums.txt
+snapshot:
+  name_template: '{{ .Tag }}-next'
+brews:
+  - name: craft
+    homepage: 'https://github.com/Spacewalkio/homebrew-tools'
+    tap:
+      owner: Spacewalkio
+      name: homebrew-tools
+      token: "{{ .Env.TAP_GITHUB_TOKEN }}"
+    commit_author:
+      name: todd-the-bot
+      email: support@clivern.com
+project_name: craft
