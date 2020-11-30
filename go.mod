@@ -1,6 +1,6 @@
 module github.com/spacewalkio/craft
 
-go 1.18
+go 1.17
 
 require (
 	github.com/charmbracelet/bubbles v0.13.0
