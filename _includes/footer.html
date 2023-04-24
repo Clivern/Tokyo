@@ -15,7 +15,7 @@
 								</p><!-- /.c-logo -->
 							{% elsif site.tok.footer.logo.image %}
 								<div class="c-logo u-mb-1">
-									<img src="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/tok-theme/assets/images/layout/logo-footer.png">
+									<img src="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/assets/images/layout/logo-footer.png">
 								</div><!-- /.c-logo -->
 							{% endif %}
 							{% if site.tok.footer.text %}
@@ -27,8 +27,8 @@
 			</footer><!-- /.c-footer -->
 		{% endif %}
 
-		<script type="text/javascript" src="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/tok-theme/assets/js/vendor/jquery-3.3.1.min.js"></script>
-		<script type="text/javascript" src="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/tok-theme/assets/js/scripts.min.js"></script>
+		<script type="text/javascript" src="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/assets/js/vendor/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/assets/js/scripts.min.js"></script>
 
 		{% include google-analytics.html %}
 	</body>

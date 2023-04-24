@@ -31,7 +31,7 @@
 		{% endif %}
 		<link rel="icon" href="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:400,400i,500,500i,700,700i">
-		<link rel="stylesheet" href="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/tok-theme/assets/css/style.css">
+		<link rel="stylesheet" href="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/assets/css/style.css">
 	</head>
 	<body>
 		{% if site.tok.header.nav or site.tok.header.cta %}
@@ -79,7 +79,7 @@
 								{% elsif site.tok.header.logo.image %}
 									<div class="c-logo">
 										<a href="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/" class="c-logo__link">
-											<img src="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/tok-theme/assets/images/layout/logo.png">
+											<img src="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/assets/images/layout/logo.png">
 										</a><!-- /.c-logo__link -->
 									</div><!-- /.c-logo -->
 								{% endif %}
