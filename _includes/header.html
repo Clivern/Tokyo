@@ -9,8 +9,8 @@
 {% endif %}
 
 <!DOCTYPE html>
-{% if site.dox.language %}
-	<html lang="{{ site.dox.language }}">
+{% if site.tok.language %}
+	<html lang="{{ site.tok.language }}">
 {% else %}
 	<html>
 {% endif %}
@@ -19,9 +19,9 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0">
 		{% if page.url == "/" %}
-			<title>{{ site.dox.title }}</title>
+			<title>{{ site.tok.title }}</title>
 		{% else %}
-			<title>{{ page.title }} | {{ site.dox.title }}</title>
+			<title>{{ page.title }} | {{ site.tok.title }}</title>
 		{% endif %}
 		{% if page.description %}
 			<meta name="description" content="{{ page.description }}">
@@ -29,85 +29,85 @@
 		{% if page.keywords %}
 			<meta name="keywords" content="{{ page.keywords }}">
 		{% endif %}
-		<link rel="icon" href="{% if jekyll.environment == 'production' %}{{ site.dox.baseurl }}{% endif %}/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:400,400i,500,500i,700,700i">
-		<link rel="stylesheet" href="{% if jekyll.environment == 'production' %}{{ site.dox.baseurl }}{% endif %}/dox-theme/assets/css/style.css">
+		<link rel="stylesheet" href="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/tok-theme/assets/css/style.css">
 	</head>
 	<body>
-		{% if site.dox.header.nav or site.dox.header.cta %}
+		{% if site.tok.header.nav or site.tok.header.cta %}
 			<div class="c-offcanvas">
 				<div class="c-offcanvas__inner">
-					{% if site.dox.header.nav %}
+					{% if site.tok.header.nav %}
 						<ul class="c-nav c-nav--stacked u-mx-auto">
-							{% for item in site.dox.header.nav %}
-								<li><a href="{% if jekyll.environment == 'production' %}{{ site.dox.baseurl }}{% endif %}{{ item.item_url }}">{{ item.item_name }}</a></li>
+							{% for item in site.tok.header.nav %}
+								<li><a href="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}{{ item.item_url }}">{{ item.item_name }}</a></li>
 							{% endfor %}
 						</ul><!-- /.c-nav -->
 					{% endif %}
-					{% if site.dox.header.cta %}
-						{% if site.dox.header.cta.icon %}
-							<a href="{{ site.dox.header.cta.url }}" class="c-btn c-btn--md c-btn--gray u-text-md">
-								{{ site.dox.header.cta.label }}
+					{% if site.tok.header.cta %}
+						{% if site.tok.header.cta.icon %}
+							<a href="{{ site.tok.header.cta.url }}" class="c-btn c-btn--md c-btn--gray u-text-md">
+								{{ site.tok.header.cta.label }}
 								<div class="c-btn__icon">
-									<i class="o-icon o-icon--{{ site.dox.header.cta.icon }}"></i>
+									<i class="o-icon o-icon--{{ site.tok.header.cta.icon }}"></i>
 								</div>
 							</a>
 						{% else %}
-							<a href="{{ site.dox.header.cta.url }}" class="c-btn c-btn--md c-btn--gray u-text-md">{{ site.dox.header.cta.label }}</a>
+							<a href="{{ site.tok.header.cta.url }}" class="c-btn c-btn--md c-btn--gray u-text-md">{{ site.tok.header.cta.label }}</a>
 						{% endif %}
 					{% endif %}
 				</div><!-- /.c-offcanvas__inner -->
 			</div><!-- /.c-offcanvas -->
 		{% endif %}
 
-		{% if site.dox.header.logo.text or site.dox.header.logo.image or site.dox.header.nav %}
+		{% if site.tok.header.logo.text or site.tok.header.logo.image or site.tok.header.nav %}
 			<header class="{{ header_classes }}">
 				<div class="o-container">
 					<div class="o-row">
 						<div class="o-col-12">
 							<div class="u-flex u-items-center">
-								{% if site.dox.header.logo.text %}
+								{% if site.tok.header.logo.text %}
 									{% if page.url == "/" %}
 										<h1 class="c-logo u-mb-0 js-logo">
-											<a href="{% if jekyll.environment == 'production' %}{{ site.dox.baseurl }}{% endif %}/" class="c-logo__link">{{ site.dox.header.logo.text }}</a>
+											<a href="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/" class="c-logo__link">{{ site.tok.header.logo.text }}</a>
 										</h1><!-- /.c-logo -->
 									{% else %}
 										<p class="c-logo u-mb-0 js-logo">
-											<a href="{% if jekyll.environment == 'production' %}{{ site.dox.baseurl }}{% endif %}/" class="c-logo__link">{{ site.dox.header.logo.text }}</a>
+											<a href="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/" class="c-logo__link">{{ site.tok.header.logo.text }}</a>
 										</p><!-- /.c-logo -->
 									{% endif %}
-								{% elsif site.dox.header.logo.image %}
+								{% elsif site.tok.header.logo.image %}
 									<div class="c-logo">
-										<a href="{% if jekyll.environment == 'production' %}{{ site.dox.baseurl }}{% endif %}/" class="c-logo__link">
-											<img src="{% if jekyll.environment == 'production' %}{{ site.dox.baseurl }}{% endif %}/dox-theme/assets/images/layout/logo.png">
+										<a href="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/" class="c-logo__link">
+											<img src="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}/tok-theme/assets/images/layout/logo.png">
 										</a><!-- /.c-logo__link -->
 									</div><!-- /.c-logo -->
 								{% endif %}
-								{% if site.dox.header.nav or if site.dox.header.cta %}
+								{% if site.tok.header.nav or if site.tok.header.cta %}
 									<div class="u-flex u-items-center u-ml-auto">
-										{% if site.dox.header.nav %}
+										{% if site.tok.header.nav %}
 											<ul class="c-nav u-mb-0 u-hidden u-block@lg">
-												{% for item in site.dox.header.nav %}
+												{% for item in site.tok.header.nav %}
 													{% if item.item_name == page.title %}
 														{% assign item_classes = 'is-current' %}
 													{% else %}
 														{% assign item_classes = '' %}
 													{% endif %}
-													<li class="{{ item_classes }}"><a href="{% if jekyll.environment == 'production' %}{{ site.dox.baseurl }}{% endif %}{{ item.item_url }}">{{ item.item_name }}</a></li>
+													<li class="{{ item_classes }}"><a href="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}{{ item.item_url }}">{{ item.item_name }}</a></li>
 												{% endfor %}
 											</ul><!-- /.c-nav -->
 										{% endif %}
-										{% if site.dox.header.cta %}
+										{% if site.tok.header.cta %}
 											<div class="u-ml-5 u-hidden u-block@lg">
-												{% if site.dox.header.cta.icon %}
-													<a href="{{ site.dox.header.cta.url }}" class="{{ cta_classes }}">
-														{{ site.dox.header.cta.label }}
+												{% if site.tok.header.cta.icon %}
+													<a href="{{ site.tok.header.cta.url }}" class="{{ cta_classes }}">
+														{{ site.tok.header.cta.label }}
 														<div class="c-btn__icon">
-															<i class="o-icon o-icon--{{ site.dox.header.cta.icon }}"></i>
+															<i class="o-icon o-icon--{{ site.tok.header.cta.icon }}"></i>
 														</div>
 													</a>
 												{% else %}
-													<a href="{{ site.dox.header.cta.url }}" class="{{ cta_classes }}">{{ site.dox.header.cta.label }}</a>
+													<a href="{{ site.tok.header.cta.url }}" class="{{ cta_classes }}">{{ site.tok.header.cta.label }}</a>
 												{% endif %}
 											</div>
 										{% endif %}

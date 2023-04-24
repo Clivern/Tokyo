@@ -63,27 +63,27 @@
 								{% else %}
 									{% if button.style == 'filled' %}
 										{% if button.icon %}
-											<a href="{% if jekyll.environment == 'production' %}{{ site.dox.baseurl }}{% endif %}{{ button.url }}" class="c-btn c-btn--white c-btn--lg u-h6 u-mr-1 u-mb-2">
+											<a href="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}{{ button.url }}" class="c-btn c-btn--white c-btn--lg u-h6 u-mr-1 u-mb-2">
 												{{ button.label }}
 												<div class="c-btn__icon">
 													<i class="o-icon o-icon--{{ button.icon }}"></i>
 												</div>
 											</a>
 										{% else %}
-											<a href="{% if jekyll.environment == 'production' %}{{ site.dox.baseurl }}{% endif %}{{ button.url }}" class="c-btn c-btn--white c-btn--lg u-h6 u-mr-1 u-mb-2">
+											<a href="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}{{ button.url }}" class="c-btn c-btn--white c-btn--lg u-h6 u-mr-1 u-mb-2">
 												{{ button.label }}
 											</a>
 										{% endif %}
 									{% elsif button.style == 'bordered' %}
 										{% if button.icon %}
-											<a href="{% if jekyll.environment == 'production' %}{{ site.dox.baseurl }}{% endif %}{{ button.url }}" class="c-btn c-btn--bordered-white c-btn--lg u-h6 u-mr-1 u-mb-2">
+											<a href="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}{{ button.url }}" class="c-btn c-btn--bordered-white c-btn--lg u-h6 u-mr-1 u-mb-2">
 												{{ button.label }}
 												<div class="c-btn__icon">
 													<i class="o-icon o-icon--{{ button.icon }}"></i>
 												</div>
 											</a>
 										{% else %}
-											<a href="{% if jekyll.environment == 'production' %}{{ site.dox.baseurl }}{% endif %}{{ button.url }}" class="c-btn c-btn--bordered-white c-btn--lg u-h6 u-mr-1 u-mb-2">
+											<a href="{% if jekyll.environment == 'production' %}{{ site.tok.baseurl }}{% endif %}{{ button.url }}" class="c-btn c-btn--bordered-white c-btn--lg u-h6 u-mr-1 u-mb-2">
 												{{ button.label }}
 											</a>
 										{% endif %}
