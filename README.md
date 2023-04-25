@@ -5,7 +5,7 @@ A Jekyll Documentation Theme.
 
 ### Usage
 
-Check `example` directory for a working example.
+Check `docs` directory for a working example.
 
 
 ### Contributing
