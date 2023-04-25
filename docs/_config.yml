@@ -41,11 +41,6 @@ defaults:
         values:
             layout: 'documentation-single'
 
-# SASS settings
-sass:
-    sass_dir: ./tok-theme/_sass
-    style: :compressed
-
 # Jekyll settings
 permalink: /:title/
 remote_theme: Clivern/Tokyo
